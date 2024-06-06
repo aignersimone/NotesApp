@@ -1,0 +1,46 @@
+/* Rahmen um die Notelist legen */
+#notelist{
+    border: solid grey 0.5px;
+}
+
+/* Listenitem stylen */
+.list-group-item{
+    border: none;
+    padding: 3px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover mit Transition, damit es nicht stockt, sondern fließend größer/kleiner wird */
+.list-group-item:hover{
+    transform: scale(1.03);
+    cursor:pointer;
+}
+
+/*Animation - slide-up der Listen-Elemente */
+.list-group-item{
+    animation-name: slide-up;
+    animation-duration: 1.5s;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+@keyframes slide-up {
+    0%{
+        margin-top: 100%;
+    }
+    100%{
+        margin-top: 0%;
+    }
+}
+
+/* unordered Liste stylen */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Scrollbar*/
+.list-group {
+    max-height: 410px;
+    overflow-y: auto;
+}

@@ -1,0 +1,170 @@
+/* weitere CSS styles implementieren, die ausgelagert wurden */
+@import "header.css";
+@import "note.css";
+@import "notelist.css";
+
+/* Google Font importieren */
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+
+/* Farben festlegen */
+:root{
+    --sa-primary: darkorange;
+    --sa-secondary: #E6482F;
+}
+
+/* Überschriften formatieren */
+/* Google Font für Headlines verwendet*/
+
+body{
+    font-size: 13px;
+    background-image: url('/img/bg.jpg');
+}
+
+.navbarbg{
+    background-image: url('/img/bg.jpg');
+}
+
+.container{
+    max-width: 1000px;
+}
+
+h1{
+    font-family: 'Archivo', sans-serif;
+    color: var(--sa-secondary);
+    font-size: 20px;
+}
+
+h2{
+    font-family: 'Archivo', sans-serif;
+    color: var(--sa-primary);
+    font-size: 17px;
+    margin-top: 8px;
+    margin-bottom: 2px;
+}
+
+/* Cardtitel formatieren */
+.card-title{
+    font-family: 'Archivo', sans-serif;
+    color: var(--sa-secondary);
+    font-size: 15px;
+}
+
+/* Card-Textgröße formatieren */
+.card-body{
+    font-size: 13px;
+}
+
+/* Button formatieren/stylen + hover  */
+.btn-primary{
+    background-color: var(--sa-primary);
+    border: none;
+    font-size: 14px;
+}
+
+.btn-primary:hover{
+    background-color: var(--sa-secondary);
+    border: none;
+    color: white;
+}
+
+/* Farbzustände des Dropdown Items festlegen */
+.dropdown-item:hover {
+    background-color: rgba(252, 159, 142, 0.94);
+}
+
+.dropdown:hover .dropdown-toggle {
+    background-color: var(--sa-secondary);
+}
+
+/* Icon anpassen */
+.icon{
+    padding-left: 3px;
+    max-height: 22px;
+    margin-bottom: 0;
+}
+
+/* Animation User-Begrüßung - Farbverlauf*/
+#UserWelcome{
+    animation-name: color-change;
+    animation-duration: 3s;
+}
+
+/* Keyframes setzen, wann welcher Farbzustand eingenommen werden soll */
+@keyframes color-change {
+    0%{ color: yellow; }
+    40%{ color: orange); }
+    100%{ color: var(--sa-secondary); }
+}
+
+/* Farben für die ausgewählten Felder der Radiobuttons und Checkboxen definieren */
+input[type="checkbox"]:checked {
+    border-color: var(--sa-secondary);
+    background-color: var(--sa-secondary);
+}
+
+input[type="radio"]:checked {
+    border-color: var(--sa-secondary);
+    background-color: var(--sa-secondary);
+}
+
+.form-check-input:focus {
+    border-color: rgba(245, 206, 123, 0.78);
+    box-shadow: 0 0 0 0.25rem rgba(245, 206, 123, 0.78);
+}
+
+/* Form Fokus festlegen*/
+.form-control:focus{
+    border-color: rgba(245, 206, 123, 0.78);
+    box-shadow: 0 0 0 0.25rem rgba(245, 206, 123, 0.78);
+}
+
+/* Button active Farbe festlegen */
+button:active{
+    background-color: var(--sa-secondary) !important;
+}
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    background-color: var(--sa-secondary) !important;
+}
+
+/* Navbar Pointer */
+.navbarcontainer:hover{
+    cursor:pointer;
+}
+
+/* Navbar item Farbe*/
+.nav-item btn{
+    color: white;
+}
+
+/* Navbar Toggler Farbe und Größe*/
+.navbar-toggler-icon {
+    filter: invert(1);
+    width: 2.5em;
+    height: 2.5em;
+}
+
+/* Border Radius bei Umbruch richtig ändern */
+@media (max-width: 766px) {
+    .rounded-notelist {
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+    }
+
+    .rounded-noteDetail {
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+}
+
+@media (min-width: 767px) {
+    .rounded-notelist {
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
+
+    .rounded-noteDetail {
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+}

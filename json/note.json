@@ -1,0 +1,89 @@
+{
+  "userId": "Simone Aigner",
+  "notes" : [
+    {
+      "id":1,
+      "name" : "Einkaufsliste",
+      "text" : "Unbedingt einkaufen: Essig, Öl",
+      "date": "16.11.2023",
+      "priority": "Mittel",
+      "isactive": "true",
+      "tags": [
+          {
+            "name": "Essen"
+          }
+        ]
+    },
+    {
+      "id":2,
+      "name" : "Müllkalender",
+      "text" : "Müll raustragen",
+      "date": "18.11.2023",
+      "priority": "Hoch",
+      "isactive": "true",
+      "tags": [
+        {
+          "name": "Müll"
+        }
+      ]
+    },
+    {
+      "id":3,
+      "name" : "Auto pflegen",
+      "text" : "Zu erledigen: Saugen, Waschen, Scheiben wischen",
+      "date": "01.11.2023",
+      "priority": "Mittel",
+      "isactive": "false",
+      "tags": [
+        {
+          "name": "Auto"
+        },
+        {
+          "name": "Waschanlage"
+        }
+      ]
+    },
+    {
+      "id":4,
+      "name" : "Pferdepflege",
+      "text" : "Putzen, Reiten, Platz abziehen",
+      "date": "12.11.2023",
+      "priority": "Hoch",
+      "isactive": "false",
+      "tags": [
+        {
+          "name": "Pferd"
+        }
+      ]
+    },
+    {
+      "id":5,
+      "name" : "Stall putzen",
+      "text" : "Putzen, Misten",
+      "date": "12.01.2024",
+      "priority": "Hoch",
+      "isactive": "true",
+      "tags": [
+        {
+          "name": "Pferd"
+        },
+        {
+          "name": "Stallarbeit"
+        }
+      ]
+    },
+    {
+      "id":6,
+      "name" : "Gartenarbeit",
+      "text" : "Steine legen, Rasenmähen",
+      "date": "15.02.2024",
+      "priority": "Niedrig",
+      "isactive": "true",
+      "tags": [
+        {
+          "name": "Garten"
+        }
+      ]
+    }
+  ]
+}

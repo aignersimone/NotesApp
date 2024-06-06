@@ -1,0 +1,44 @@
+/* Logogröße definieren */
+#headerlogo, #Logo {
+    max-height:  80px;
+}
+
+/* MediaQueries verwendet, um die Logos in Abhängigkeit von der Bildschirmbreite anzupassen */
+/* Wenn die Bildschirmbreite 400 Pixel oder kleiner ist, kommen Regeln ins Spiel:
+   maximale Höhe des Logos (ID: "headerlogo", "Logo") wird auf 60px reduziert. */
+@media only screen and (max-width: 400px) {
+    #headerlogo {
+        max-height: 60px;
+    }
+    #Logo{
+        max-height: 60px;
+    }
+}
+
+/* Collapse der Navbar stylen */
+.navbar-collapse{
+    flex-grow: 0;
+    text-align: end;
+}
+
+ /* Navitem stylen*/
+.nav-item{
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+/* Navlink stylen und Hover vergeben */
+btn.nav-link{
+    margin-left: 3rem;
+}
+
+btn.nav-link:hover{
+    text-decoration: underline;
+    color: var(--sa-secondary);
+}
+
+/* Navbar Item Klasse active stylen, um die aktive Seite hervorzuheben */
+.navbar-nav .nav-item .active {
+    text-decoration: underline;
+    color: var(--sa-primary);
+}
