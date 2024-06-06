@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My-Notes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="img/logo_fav.png">
+</head>
+<body >
+ <!-- Navbar die in ein Burger Menü wechsel -->
+ <div class="bg-black navbarbg">
+     <nav class=" navbar navbar-expand-lg">
+         <div class="container ">
+             <a class="navbar-brand">
+                 <img id="headerlogo" src="img/logo.png" alt="Logo My-Notes">
+             </a>
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+             </button>
+             <div class="collapse navbar-collapse navbarcontainer" id="navbarSupportedContent">
+                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                     <li id="notizen" class="nav-item ">
+                         <btn id="notizen" class="nav-link active">Notizen</btn>
+                     </li>
+                     <li id="archiv" class="nav-item">
+                         <btn id="archivierteNotizen" class="nav-link">Archiv</btn>
+                     </li>
+                     <li id="tags" class="nav-item">
+                         <btn id="tags" class="nav-link">Tags</btn>
+                     </li>
+                 </ul>
+             </div>
+         </div>
+     </nav>
+ </div>
+
+ <div class="container ">
+    <div id="Userid" class="row">
+        <div class="col-12 text-center">
+            <img id="Logo" class="mx-auto d-block" src="img/logo_title.png" alt="Logo My-Notes">
+           <h1 id="UserWelcome"> Herzlich Willkommen Simone! </h1>
+        </div>
+    </div>
+ </div>
+
+ <div  class="container  my-4 rounded">
+    <div class="row rounded">
+        <div id="notelist" class="col-md-5 col-xs-12 bg-white p-4 rounded-notelist">
+            <div id="header">
+                <div id="noteheader">
+                    <h1 class="mb-3 ">Meine Notizen</h1>
+                    <div class="row">
+                        <div class="col-7">
+                            <button type="button" id="addNoteBtn" class="btn btn-primary">Notiz anlegen</button>
+                            <button type="button" id="addTagBtn" class="btn btn-primary">Tag anlegen</button>
+                        </div>
+                        <div id="dropDown" class="col-5 dropdown text-end">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img class="icon" src="img/icons/filter.png">
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a id="aufsteigend" class="dropdown-item" href="#">Nach Priorität aufsteigend</a></li>
+                                <li><a id="absteigend"  class="dropdown-item" href="#">Nach Priorität absteigend</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div id="nodelist">
+                <ul class="list-group notelist">
+                    <li id="note_6" class="list-group-item node-element">
+                        <div class="card mb-3">
+                            <div class="card-body bg-light">
+                                <div class="row">
+                                    <div class="col-10">
+                                        <h5 class="card-title">Titel</h5>
+                                    </div>
+                                    <div class="col-2">
+                                        <img class="icon insArchiv"  src="img/icons/insArchiv.png" href="#">
+                                    </div>
+
+                                </div>
+                                <p class="card-text">11.01.2024</p>
+                                <p class="card-text">hoch</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="note_7" class="list-group-item node-element">
+                        <div class="card mb-3">
+                            <div class="card-body bg-light">
+                                <div class="row">
+                                    <div class="col-10">
+                                        <h5 class="card-title">Titel2</h5>
+                                    </div>
+                                    <div class="col-2">
+                                        <img class="icon ausArchiv"  src="img/icons/ausArchiv.png" href="#">
+                                    </div>
+
+                                </div>
+                                <p class="card-text">11.01.2024</p>
+                                <p class="card-text">mittel</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul  class="list-group taglist">
+                    <li id="Haus" class="list-group-item tag-element">
+                        <div class="card mb-3">
+                            <div class="card-body bg-light">
+                                <div class="row">
+                                    <h5 class="card-title">Haus</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="Teich" class="list-group-item tag-element">
+                        <div class="card mb-3">
+                            <div class="card-body bg-light">
+                                <div class="row">
+                                    <h5 class="card-title">Teich</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div id="newNote" class="col-md-7 col-xs-12 note bg-white p-4 rounded-noteDetail">
+            <h1 class="mb-3">Neue Notiz</h1>
+            <div class="mb-3">
+                <label for="notename" class="form-label">
+                    <h2>Notizenname</h2>
+                </label>
+                <input type="text" class="form-control" id="notename">
+            </div>
+            <div class="mb-3">
+                <label for="notetext" class="form-label">
+                    <h2>Notiz</h2>
+                </label>
+                <textarea type="text" class="form-control" id="notetext" rows="3"></textarea>
+            </div>
+            <div>
+                <h2>Priorität der Notiz</h2>
+                <div class="btn-group mb-3" role="group">
+                    <div>
+                        <input class="form-check-input me-1" type="radio" name="flexRadioDefault" id="prioHoch">
+                        <label class="form-check-label me-3" for="prioHoch">
+                            Hoch
+                        </label>
+
+                        <input class="form-check-input me-1" type="radio" name="flexRadioDefault" id="prioMittel">
+                        <label class="form-check-label me-3" for="prioMittel">
+                            Mittel
+                        </label>
+
+                        <input class="form-check-input me-1" type="radio" name="flexRadioDefault" id="prioNiedrig">
+                        <label class="form-check-label me-3" for="prioNiedrig">
+                            Niedrig
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2>Tag wählen</h2>
+                <div class="mb-3 form-check">
+                    ${tagCheckboxes}
+                </div>
+            </div>
+            <button type="submit" id="saveNote" class="btn btn-primary">Notiz speichern</button>
+            <button type="submit" id="changeNote" class="btn btn-primary me-3">Änderungen speichern</button>
+            <button type="submit" id="deleteNote" class="btn btn-primary">Notiz löschen</button>`;
+            <h1 class="mb-3">Ihr Tag</h1>
+            <div class="mt-4 mb-3">
+                <label for="tagname" class="form-label">
+                    <h2>Tagname</h2>
+                </label>
+                <input type="text" class="form-control" id="tagname" value="${tag}">
+            </div>
+            <button id="changeTag" type="button" class="btn btn-primary me-3">Änderungen speichern</button>
+            <button id="deleteTag" type="button" class="btn btn-primary me-3">Tag löschen</button>
+            <button id="saveTag" type="button" class="btn btn-primary me-3">Tag speichern</button>
+        </div>
+    </div>
+ </div>
+
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+ <script type="module" src="js/main.js"></script>
+</body>
+</html>
